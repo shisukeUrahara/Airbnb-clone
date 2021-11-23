@@ -2,7 +2,6 @@ import React from "react";
 import MediumCard from "../MediumCard/MediumCard";
 
 function MainMiddleSection({ data }) {
-  console.log("**@ mainMiddleSection , data is , ", data);
   return (
     <section>
       <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>

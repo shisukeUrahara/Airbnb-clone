@@ -2,10 +2,9 @@ import Head from "next/head";
 import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
 import MainSection from "../components/MainSection/MainSection";
+import Footer from "../components/Footer/Footer";
 
 export default function Home({ exploreData, cardsData }) {
-  console.log("**@ index , exploreData is , ", exploreData);
-
   return (
     <div className="">
       <Head>
@@ -21,6 +20,9 @@ export default function Home({ exploreData, cardsData }) {
 
         {/* Main section */}
         <MainSection exploreData={exploreData} cardsData={cardsData} />
+
+        {/* footer */}
+        <Footer />
       </div>
     </div>
   );
@@ -34,8 +36,6 @@ export async function getStaticProps() {
   const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
     res.json()
   );
-
-  console.log("**@ index , exploreData is , ", exploreData);
 
   return {
     props: {
